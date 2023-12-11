@@ -3,6 +3,10 @@
   font-weight: 400;
   font-style: normal;
 }
+
+li {
+  font-size: 14px;
+}
 </style>
 
 <template>
@@ -36,7 +40,7 @@
           }
         }">
           <span class="flex-grow text-gray-900 line-clamp-1">第 {{ index + 1 }} 封：{{ item.title }}</span>
-          <span class="flex-shrink-0 text-sm text-gray-400 font-mono">{{ item.modifiedTime }}</span>
+          <span class="flex-shrink-0 text-gray-400 ">{{ item.modifiedTime }}</span>
         </RouterLink>
       </li>
     </ul>
@@ -59,7 +63,7 @@
           }
         }">
           <span class="flex-grow text-gray-900 line-clamp-1">第 {{ index + 1 }} 期：{{ item.title }}</span>
-          <span class="flex-shrink-0 text-sm text-gray-400 font-mono">{{ item.modifiedTime }}</span>
+          <span class="flex-shrink-0 text-gray-400 ">{{ item.modifiedTime }}</span>
         </RouterLink>
       </li>
     </ul>
