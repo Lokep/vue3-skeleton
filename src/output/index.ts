@@ -1,11 +1,6 @@
 export default {
   "letters": [
     {
-      "filePath": "src/views/letters/2023-05-29.md",
-      "modifiedTime": "2023-05-29",
-      "title": "十年了，你好吗"
-    },
-    {
       "filePath": "src/views/letters/2016-05-01.md",
       "modifiedTime": "2016-05-01",
       "title": "你好啊，浙外"
@@ -29,21 +24,23 @@ export default {
       "filePath": "src/views/letters/2018-02-18.md",
       "modifiedTime": "2018-02-18",
       "title": "临近毕业"
+    },
+    {
+      "filePath": "src/views/letters/2023-05-29.md",
+      "modifiedTime": "2023-05-29",
+      "title": "十年了，你好吗"
     }
   ],
   "dreams": [
     {
       "filePath": "src/views/dreams/2023-10-20.md",
-      "modifiedTime": "2023-12-11",
-      "title": "2023-10-20"
+      "modifiedTime": "2023-10-20",
+      "title": "零碎的梦「二」"
     },
     {
       "filePath": "src/views/dreams/2023-07-24.md",
-      "modifiedTime": "2023-12-11",
-      "title": "2023-07-24"
-    }
-  ]
-};
+      "modifiedTime": "2023-07-24",
+      "title": "零碎的梦"
     }
   ]
 };
