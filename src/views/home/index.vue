@@ -18,12 +18,12 @@ li {
         <span>I'm SISYPHUS</span>
       </h1>
 
-      <div class="mt-6 text-gray-900 space-y-1.5">
-        <p>❄️ 雪花还在飘落，浓雾还没散去，我仍然在行走。</p>
+      <div class="mt-2 text-gray-900 space-y-1.5">
+        <p>雪花还在飘落，浓雾还没散去，我仍然在行走。</p>
       </div>
     </div>
 
-    <div class="flex items-center justify-between px-3 mt-5">
+    <div class="flex items-center justify-between px-3 mt-8">
       <h2 class="font-medium text-xl text-gray-800">信件</h2>
     </div>
 
