@@ -39,7 +39,8 @@ li {
             modifiedTime: item.modifiedTime,
           }
         }">
-          <span class="flex-grow text-gray-900 line-clamp-1">第 {{ index + 1 }} 封：{{ item.title }}</span>
+          <span class="flex-grow text-gray-900 line-clamp-1">第 {{ records.letters.length - index }} 封：{{ item.title
+          }}</span>
           <span class="flex-shrink-0 text-gray-400 ">{{ item.modifiedTime }}</span>
         </RouterLink>
       </li>
@@ -62,7 +63,8 @@ li {
             modifiedTime: item.modifiedTime,
           }
         }">
-          <span class="flex-grow text-gray-900 line-clamp-1">第 {{ index + 1 }} 期：{{ item.title }}</span>
+          <span class="flex-grow text-gray-900 line-clamp-1">第 {{ records.dreams.length - index }} 期：{{ item.title
+          }}</span>
           <span class="flex-shrink-0 text-gray-400 ">{{ item.modifiedTime }}</span>
         </RouterLink>
       </li>

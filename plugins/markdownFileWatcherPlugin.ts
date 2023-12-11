@@ -43,7 +43,7 @@ const dataTransfer = (data: TotalData) => {
         modifiedTime: modifiedTime || item.modifiedTime,
         title: title || item.title
       }
-    })
+    }).sort((a, b) => dayjs(a.modifiedTime).isBefore(dayjs(b.modifiedTime)) ? 1 : -1)
   }
 
   return result
