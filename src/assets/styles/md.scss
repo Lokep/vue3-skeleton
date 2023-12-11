@@ -1,0 +1,85 @@
+.letter,.dream {
+
+
+  h1 {
+    line-height: 1.8;
+    @apply my-5;
+    @apply font-medium;
+    @apply text-2xl;
+  }
+
+  blockquote {
+    @apply border-l-4;
+    @apply border-gray-300;
+    @apply bg-slate-50;
+    @apply pl-4;
+    @apply pr-2;
+    @apply my-4;
+    @apply rounded-sm;
+    overflow: hidden;
+  }
+
+  a {
+    @apply text-blue-500;
+    @apply underline;
+    @apply font-semibold;
+  }
+
+  p {
+    line-height: 1.8;
+    font-size: 14px;
+    @apply my-4;
+  }
+
+  img {
+    @apply block;
+    @apply shadow;
+    @apply rounded;
+  }
+
+  audio {
+    @apply w-full;
+
+    @apply p-2;
+    @apply shrink-0;
+    flex: 1;
+  }
+
+  .audio-container {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    background-color: #f2f3f4;
+    @apply items-center;
+    @apply rounded;
+    @apply shadow;
+    overflow: hidden;
+    box-sizing: content-box;
+  }
+
+  .audio-cover {
+    width: 80px;
+    height: 100%;
+    flex-shrink: 0;
+    border-radius: 0
+  }
+
+  .iframe-container {
+    @apply w-full;
+    height: 88px;
+
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    p {
+      font-size: 18px;
+    }
+  }
+
+}
+
+
