@@ -15,7 +15,7 @@ export const constantRecords = [
   {
     "filePath": "src/views/letters/2017-02-17.md",
     "modifiedTime": "2017-02-17",
-    "title": "大三了, 好久没见了"
+    "title": "大三了，好久没见了"
   },
   {
     "filePath": "src/views/letters/2018-02-18.md",

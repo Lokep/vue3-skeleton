@@ -18,7 +18,7 @@ export default {
     {
       "filePath": "src/views/letters/2017-02-17.md",
       "modifiedTime": "2017-02-17",
-      "title": "大三了, 好久没见了"
+      "title": "大三了，好久没见了"
     },
     {
       "filePath": "src/views/letters/2016-05-01.md",
@@ -32,6 +32,11 @@ export default {
     }
   ],
   "dreams": [
+    {
+      "filePath": "src/views/dreams/到站.md",
+      "modifiedTime": "2023-12-11",
+      "title": "到站"
+    },
     {
       "filePath": "src/views/dreams/2023-10-20.md",
       "modifiedTime": "2023-10-20",
