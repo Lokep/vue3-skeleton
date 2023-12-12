@@ -20,6 +20,7 @@ import MarkdownIt from 'markdown-it';
 import markdownItIframe from '@/utils/markdownItIframe'
 import markdownItImage from '@/utils/markdownItImage'
 import Skeleton from '@/components/skeleton.vue'
+import markdownItTasks from '@/utils/markdownItTasks';
 
 const rawContent = ref('')
 
@@ -28,6 +29,7 @@ const content = computed(() => {
 
   md.use(markdownItImage)
   md.use(markdownItIframe, { renderIframe: true, height: 88 })
+  md.use(markdownItTasks)
 
   return md.render(rawContent.value)
 })

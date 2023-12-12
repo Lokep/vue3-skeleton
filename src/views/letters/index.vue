@@ -21,6 +21,7 @@ import { useRoute } from 'vue-router';
 import MarkdownIt from 'markdown-it';
 import markdownItIframe from '@/utils/markdownItIframe'
 import markdownItImage from '@/utils/markdownItImage'
+import markdownItTasks from '@/utils/markdownItTasks'
 import Skeleton from '@/components/skeleton.vue'
 
 const rawContent = ref('')
@@ -30,6 +31,7 @@ const content = computed(() => {
 
   md.use(markdownItImage)
   md.use(markdownItIframe, { renderIframe: true, height: 88 })
+  md.use(markdownItTasks)
 
   return md.render(rawContent.value)
 })
