@@ -6,7 +6,7 @@
   <div class="container">
     <div class="flex flex-col items-center px-2 pt-12 pb-8">
       <h1 class="font-medium text-2xl">第 {{ no }} 封：{{ id }}</h1>
-      <p class="mt-2 text-gray-500 text-sm font-mono">2023-12-02</p>
+      <p class="mt-2 text-gray-500 text-sm font-mono">{{ modifiedTime }}</p>
     </div>
 
     <Skeleton v-if="!content" />
