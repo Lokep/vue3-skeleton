@@ -8,7 +8,10 @@
       <h1 class="font-medium text-2xl">第 {{ no }} 封：{{ id }}</h1>
       <p class="mt-2 text-gray-500 text-sm font-mono">2023-12-02</p>
     </div>
-    <div class="letter" v-html="content"></div>
+
+    <Skeleton v-if="!content" />
+
+    <div class="letter" v-else v-html="content"></div>
   </div>
 </template>
 
@@ -18,6 +21,7 @@ import { useRoute } from 'vue-router';
 import MarkdownIt from 'markdown-it';
 import markdownItIframe from '@/utils/markdownItIframe'
 import markdownItImage from '@/utils/markdownItImage'
+import Skeleton from '@/components/skeleton.vue'
 
 const rawContent = ref('')
 

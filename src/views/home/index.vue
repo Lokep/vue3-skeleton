@@ -5,7 +5,7 @@
 }
 
 li {
-  font-size: 14px;
+  @apply text-sm;
 }
 </style>
 
@@ -19,7 +19,7 @@ li {
       </h1>
 
       <div class="mt-2 text-gray-900 space-y-1.5">
-        <p>雪花还在飘落，浓雾还没散去，我仍然在行走。</p>
+        <p class="text-sm">雪花还在飘落，浓雾还没散去，我仍然在行走。</p>
       </div>
     </div>
 
@@ -35,7 +35,7 @@ li {
           name: 'letter',
           params: { id: item.title },
           query: {
-            no: index + 1,
+            no: records.letters.length - index,
             modifiedTime: item.modifiedTime,
           }
         }">
@@ -59,7 +59,7 @@ li {
           name: 'dream',
           params: { id: item.title },
           query: {
-            no: index + 1,
+            no: records.letters.length - index,
             modifiedTime: item.modifiedTime,
           }
         }">
