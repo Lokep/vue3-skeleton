@@ -39,8 +39,7 @@ const content = computed(() => {
 
 const route = useRoute()
 const { id = '' } = route.params
-const { m: modifiedTime, n: no, t: title } = qs.parse(atob(id))
-console.log(atob(id))
+const { m: modifiedTime, n: no, t: title } = qs.parse(atob(id as string))
 
 
 const modules = import.meta.glob('@/docs/**/*.md', { as: 'raw', import: 'default' })
