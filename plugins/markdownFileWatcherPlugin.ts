@@ -35,13 +35,10 @@ const dataTransfer = (data: TotalData) => {
 
   for (let key in data) {
     result[key] = data[key].map(item => {
-
-      const { modifiedTime = '', title = '' } = constantRecords.find(el => el.filePath === item.filePath) || {}
-
       return {
         filePath: item.filePath,
-        modifiedTime: modifiedTime || item.modifiedTime,
-        title: title || item.title
+        modifiedTime: item.modifiedTime,
+        title: item.title
       }
     }).sort((a, b) => dayjs(a.modifiedTime).isBefore(dayjs(b.modifiedTime)) ? 1 : -1)
   }
@@ -60,7 +57,7 @@ const getTitle = (filePath: string) => {
 // 定义 Vite 插件
 export default function markdownFileWatcherPlugin(): Plugin {
   // 监听文件变化的目录路径
-  const watchedDir = ['./src/views/letters', './src/views/dreams'];
+  const watchedDir = ['./src/docs'];
 
   // 用于记录文件变化信息的数组
   const fileChanges: TotalData = {
