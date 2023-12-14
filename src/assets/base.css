@@ -4,11 +4,13 @@
 
 @font-face {
   font-family: "Barlow";
+  font-display: block;
   src: url(https://resource.flomoapp.com/flomo-web/fonts/Barlow-Regular.3a262070.ttf) format("opentype");
 }
 
 @font-face {
   font-family: "Barlow";
+  font-display: block;
   src: url(https://resource.flomoapp.com/flomo-web/fonts/Barlow-SemiBold.6c26833e.ttf) format("opentype");
   font-weight: bold;
 }
