@@ -5,13 +5,11 @@
 <template>
   <div class="container">
     <div class="flex flex-col items-center px-2 pt-12 pb-8">
-      <h1 class="font-medium text-2xl">第 {{ no }} 封：{{ title }}</h1>
-      <p class="mt-2 text-gray-500 text-sm font-mono">{{ modifiedTime }}</p>
+      <h1 class="font-medium text-2xl dark:text-white">第 {{ no }} 封：{{ title }}</h1>
+      <p class="mt-2 text-gray-500 text-sm font-mono dark:text-white">{{ modifiedTime }}</p>
     </div>
 
-    <Skeleton v-if="!content" />
-
-    <div class="letter" v-else v-html="content"></div>
+    <div class="letter dark:text-white overflow-hidden pb-12 px-2 pt-2" v-html="content"></div>
   </div>
 </template>
 

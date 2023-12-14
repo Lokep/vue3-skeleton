@@ -15,6 +15,10 @@
     @apply pr-2;
     @apply my-4;
     @apply rounded-sm;
+
+    @apply border-gray-600;
+    @apply dark:bg-slate-700;
+    @apply dark:text-slate-400;
     overflow: hidden;
   }
 
@@ -39,6 +43,7 @@
     font-size: 14px;
     @apply my-4;
     text-align: justify;
+    @apply dark:text-slate-200;
   }
 
   img {
@@ -97,6 +102,7 @@
 
       &:hover {
         @apply bg-slate-50;
+        @apply dark:bg-slate-600;
       }
 
       &-checkbox {
@@ -113,5 +119,11 @@
     p, li {
       font-size: 18px;
     }
+  }
+
+  hr {
+    border-top-width: 1.5px;
+    @apply my-4;
+    @apply dark:border-slate-400;
   }
 }

@@ -7,30 +7,60 @@
 li {
   @apply text-sm;
 }
+
+.cell {
+  @apply px-3;
+  @apply py-2;
+  @apply mt-1;
+  @apply rounded-md;
+  @apply hover:bg-gray-100;
+
+  &:hover {
+    .cell-title {
+      @apply text-gray-900;
+    }
+
+    .cell-time {
+      @apply text-gray-400;
+    }
+  }
+
+  &-title {
+    @apply flex-grow;
+    @apply text-gray-900;
+    @apply line-clamp-1;
+    @apply dark:text-white;
+  }
+
+  &-time {
+    @apply flex-shrink-0;
+    @apply text-gray-400;
+    @apply dark:text-white;
+  }
+}
 </style>
 
 <template>
-  <div class="container">
+  <div class="container pt-12">
     <div class="px-3 py-2">
 
-      <h1 class="flex flex-col text-3xl text-black leading-normal tracking-wider title">
+      <h1 class="flex flex-col text-3xl text-black leading-normal tracking-wider title dark:text-white">
         <span>Hello,</span>
         <span>I'm SISYPHUS</span>
       </h1>
 
-      <div class="mt-2 text-gray-900 space-y-1.5">
+      <div class="mt-2 text-gray-900 space-y-1.5 dark:text-white">
         <p class="text-sm">雪花还在飘落，浓雾还没散去，我仍然在行走。</p>
       </div>
     </div>
 
     <div class="flex items-center justify-between px-3 mt-8">
-      <h2 class="font-medium text-xl text-gray-800">信件</h2>
+      <h2 class="font-medium text-xl text-gray-800 dark:text-white">信件</h2>
     </div>
 
 
     <ul class="mt-4">
-      <li class="px-3 py-2 mt-1 rounded-md transition-colors hover:bg-gray-100" v-for="(item, index) in records.letters"
-        :key="index">
+      <li class="cell" v-for="(item, index) in records.letters" :key="index">
         <RouterLink class="flex items-center justify-between space-x-2" :to="{
           name: 'Docs',
           params: {
@@ -41,22 +71,22 @@ li {
             })
           }
         }">
-          <span class="flex-grow text-gray-900 line-clamp-1">第 {{ records.letters.length - index }} 封：{{ item.title
+          <span class="cell-title">第 {{ records.letters.length - index }} 封：{{
+            item.title
           }}</span>
-          <span class="flex-shrink-0 text-gray-400 ">{{ item.modifiedTime }}</span>
+          <span class="cell-time">{{ item.modifiedTime }}</span>
         </RouterLink>
       </li>
     </ul>
 
 
     <div class="flex items-center justify-between px-3 mt-12">
-      <h2 class="font-medium text-xl text-gray-800">零碎</h2>
+      <h2 class="font-medium text-xl text-gray-800 dark:text-white">零碎</h2>
     </div>
 
 
     <ul class="mt-4">
-      <li class="px-3 py-2 mt-1 rounded-md transition-colors hover:bg-gray-100" v-for="(item, index) in records.dreams"
-        :key="index">
+      <li class="cell" v-for="(item, index) in records.dreams" :key="index">
         <RouterLink class="flex items-center justify-between space-x-2" :to="{
           name: 'Docs',
           params: {
@@ -68,9 +98,10 @@ li {
           },
 
         }">
-          <span class="flex-grow text-gray-900 line-clamp-1">第 {{ records.dreams.length - index }} 期：{{ item.title
+          <span class="cell-title">第 {{ records.dreams.length - index }} 期：{{
+            item.title
           }}</span>
-          <span class="flex-shrink-0 text-gray-400 ">{{ item.modifiedTime }}</span>
+          <span class="cell-time">{{ item.modifiedTime }}</span>
         </RouterLink>
       </li>
     </ul>

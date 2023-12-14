@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @font-face {
   font-family: "Barlow";
   font-display: block;
@@ -17,4 +18,11 @@
 
 * {
   font-family: "Barlow", "PingFang SC", Helvetica, Arial, sans-serif;
+  /* transition: color .3s; */
+  @apply transition-colors;
+}
+
+body {
+  @apply bg-white;
+  @apply dark:bg-slate-800;
 }
