@@ -47,9 +47,10 @@
   }
 
   img {
+    max-width: 100%;
     @apply block;
     @apply rounded;
-    box-shadow:  10px 14px rgba(0,0,0,.2);
+    box-shadow:  0 10px 14px rgba(0,0,0,.2);
   }
 
   audio {
