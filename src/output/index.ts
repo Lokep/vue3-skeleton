@@ -1,6 +1,36 @@
 export default {
   "letters": [
     {
+      "filePath": "src/docs/letters/2015-02-01.md",
+      "modifiedTime": "2023-12-15",
+      "title": "2015-02-01"
+    },
+    {
+      "filePath": "src/docs/letters/2019.md",
+      "modifiedTime": "2023-12-15",
+      "title": "2019"
+    },
+    {
+      "filePath": "src/docs/letters/2020.md",
+      "modifiedTime": "2023-12-15",
+      "title": "2020"
+    },
+    {
+      "filePath": "src/docs/letters/2022.md",
+      "modifiedTime": "2023-12-15",
+      "title": "2022"
+    },
+    {
+      "filePath": "src/docs/letters/2018-08-03.md",
+      "modifiedTime": "2023-12-15",
+      "title": "2018-08-03"
+    },
+    {
+      "filePath": "src/docs/letters/2016-05-01.md",
+      "modifiedTime": "2023-12-15",
+      "title": "2016-05-01"
+    },
+    {
       "filePath": "src/docs/letters/凌晨4点.md",
       "modifiedTime": "2023-12-12",
       "title": "凌晨4点"
@@ -24,16 +54,6 @@ export default {
       "filePath": "src/docs/letters/2017-02-17.md",
       "modifiedTime": "2017-02-17",
       "title": "2017-02-17"
-    },
-    {
-      "filePath": "src/docs/letters/2016-05-01.md",
-      "modifiedTime": "2016-05-01",
-      "title": "2016-05-01"
-    },
-    {
-      "filePath": "src/docs/letters/2015-02-01.md",
-      "modifiedTime": "2015-02-01",
-      "title": "2015-02-01"
     }
   ],
   "dreams": [
