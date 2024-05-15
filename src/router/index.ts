@@ -14,11 +14,6 @@ const router = createRouter({
       component: Home
     },
     {
-      path: '/docs/:id',
-      name: 'Docs',
-      component: () => import('@/views/docs/index.vue')
-    },
-    {
       path: '/:pathMatch(.*)*',
       name: '404',
       component: () => import('@/views/home/404.vue')
