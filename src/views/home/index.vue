@@ -13,7 +13,17 @@ li {
   @apply py-2;
   @apply mt-1;
   @apply rounded-md;
-  @apply hover:bg-gray-100;
+  // @apply hover:bg-gray-100;
+
+  @media (any-hover: hover) {
+    &:hover {
+      @apply bg-gray-100;
+    }
+  }
+
+  &>a:active {
+    background-color: transparent;
+  }
 
   &:hover {
     .cell-title {
@@ -62,18 +72,18 @@ li {
     <ul class="mt-4">
       <li class="cell" v-for="(item, index) in records.letters" :key="index">
         <RouterLink class="flex items-center justify-between space-x-2" :to="{
-          name: 'Docs',
-          params: {
-            id: encrypt({
-              title: item.title,
-              no: records.letters.length - index,
-              modifiedTime: item.modifiedTime,
-            })
-          }
-        }">
+        name: 'Docs',
+        params: {
+          id: encrypt({
+            title: item.title,
+            no: records.letters.length - index,
+            modifiedTime: item.modifiedTime,
+          })
+        }
+      }">
           <span class="cell-title">第 {{ records.letters.length - index }} 封：{{
-            item.title
-          }}</span>
+        item.title
+      }}</span>
           <span class="cell-time">{{ item.modifiedTime }}</span>
         </RouterLink>
       </li>
@@ -88,19 +98,19 @@ li {
     <ul class="mt-4">
       <li class="cell" v-for="(item, index) in records.dreams" :key="index">
         <RouterLink class="flex items-center justify-between space-x-2" :to="{
-          name: 'Docs',
-          params: {
-            id: encrypt({
-              title: item.title,
-              no: records.letters.length - index,
-              modifiedTime: item.modifiedTime,
-            })
-          },
+        name: 'Docs',
+        params: {
+          id: encrypt({
+            title: item.title,
+            no: records.letters.length - index,
+            modifiedTime: item.modifiedTime,
+          })
+        },
 
-        }">
+      }">
           <span class="cell-title">第 {{ records.dreams.length - index }} 期：{{
-            item.title
-          }}</span>
+        item.title
+      }}</span>
           <span class="cell-time">{{ item.modifiedTime }}</span>
         </RouterLink>
       </li>
