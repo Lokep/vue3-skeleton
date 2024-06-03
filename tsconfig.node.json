@@ -7,7 +7,6 @@
     "nightwatch.conf.*",
     "playwright.config.*",
     "plugins/*",
-    "src/utils/markdownItImage.ts"
   ],
   "compilerOptions": {
     "composite": true,

@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import { RouterView } from 'vue-router'
+import Layout from '@/components/Layout/index.vue';
+import { RouterView } from 'vue-router';
 
 const toggle = (event: MouseEvent) => {
   // document.documentElement.classList.toggle('dark')
-  document.documentElement.style.setProperty("--x", event.clientX + 'px')
-  document.documentElement.style.setProperty("--y", event.clientY + 'px')
+  document.documentElement.style.setProperty('--x', event.clientX + 'px');
+  document.documentElement.style.setProperty('--y', event.clientY + 'px');
 
   /**
    * 兼容性不太理想
@@ -14,44 +15,28 @@ const toggle = (event: MouseEvent) => {
   if (document?.startViewTransition) {
     // @ts-ignore
     document?.startViewTransition(() => {
-      document.documentElement.classList.toggle('dark')
-    })
+      document.documentElement.classList.toggle('dark');
+    });
   } else {
-    document.documentElement.classList.toggle('dark')
+    document.documentElement.classList.toggle('dark');
   }
-}
+};
 </script>
 
 <template>
-  <div class="max-w-3xl mx-auto px-4 min-h-screen ">
-    <header>
-      <div class="wrapper">
-        <nav>
-          <!-- <RouterLink to="/">Home</RouterLink> -->
-          <!-- <RouterLink to="/about">About</RouterLink> -->
-        </nav>
-      </div>
-    </header>
-
-    <!-- <div class="w-36 text-center rounded cursor-pointer select-none py-2 bg-white fixed right-0 top-0 dark:bg-slate-800 "
-      @click="toggle">切换</div> -->
-
-    <!-- <RouterView /> -->
-
-
-    <RouterView v-slot="{ Component }">
+  <Layout>
+    <!-- <RouterView v-slot="{ Component }">
       <transition enter-active-class="animate__animated animate__fadeIn"
         leave-active-class="animate__animated animate__fadeOut" mode="out-in">
         <div class="w-full" :key="$route.path">
           <component :is="Component"></component>
         </div>
       </transition>
-    </RouterView>
-
-  </div>
+    </RouterView> -->
+  </Layout>
 </template>
 
-<style lang="scss" >
+<style lang="scss">
 :root {
   --animate-duration: 300ms;
 }
@@ -61,7 +46,7 @@ const toggle = (event: MouseEvent) => {
 }
 
 ::view-transition-new(*) {
-  animation: effects .6s ease-in-out;
+  animation: effects 0.6s ease-in-out;
 }
 
 @keyframes effects {
@@ -80,7 +65,6 @@ const toggle = (event: MouseEvent) => {
 
   to {
     clip-path: circle(100% at 50% 50%);
-
   }
 }
 </style>

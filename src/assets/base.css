@@ -24,5 +24,5 @@
 
 body {
   @apply bg-white;
-  @apply dark:bg-slate-800;
+  /* @apply dark:bg-slate-800; */
 }
