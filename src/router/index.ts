@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import Home from '@/views/home/index.vue'
 import { sleep } from '@/utils'
+import { EPlatform } from '@/types/page.d'
 
 
 const router = createRouter({
@@ -32,7 +33,8 @@ const router = createRouter({
       name: 'test',
       component: () => import("@/views/home/test.vue"),
       meta: {
-        transitionName: ['zoomIn', 'zoomOut']
+        transitionName: ['zoomIn', 'zoomOut'],
+        platform: EPlatform.PC
       }
     },
     {

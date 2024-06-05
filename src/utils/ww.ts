@@ -1,5 +1,5 @@
-import * as ww from '@wecom/jssdk'
-import type { RegisterOptions, SignatureData, SendChatMessage, TextMessage, SendChatMessageImageMessage, VideoMessage, FileMessage, NewsMessage, MiniprogramMessage } from '@wecom/jssdk'
+import type { FileMessage, MiniprogramMessage, NewsMessage, RegisterOptions, SendChatMessageImageMessage, SignatureData, TextMessage, VideoMessage } from '@wecom/jssdk';
+import * as ww from '@wecom/jssdk';
 
 
 

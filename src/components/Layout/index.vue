@@ -96,7 +96,7 @@
  * - inWecom
  * - inWeapp
  */
-import type { ICustomRouteMeta } from '@/types/page';
+import { EPlatform, type ICustomRouteMeta } from '@/types/page.d';
 import { sleep } from '@/utils';
 import {
   createReusableTemplate,
@@ -116,13 +116,16 @@ const metaData = ref<ICustomRouteMeta>({});
 const enterActiveName = ref('');
 const leaveActiveName = ref('');
 
-router.beforeEach((to, from) => {
-  const { transitionName } = to.meta as ICustomRouteMeta;
-
+router.beforeEach(async (to, from, next) => {
+  const { transitionName, platform = EPlatform.PC  } = to.meta as ICustomRouteMeta;
 
   if (transitionName && isArray(transitionName)) {
     setTransitionName(transitionName);
   }
+
+  await checkPlatform(platform as EPlatform);
+
+  next();
 })
 
 onBeforeMount(async () => {
@@ -136,7 +139,6 @@ onBeforeMount(async () => {
   refreshTasks.value = [];
   reachBottomTasks.value = [];
 
-  // setTransitionName();
   updateFavicon();
   handleAuthCheck();
   handleCacheControl();
@@ -144,9 +146,16 @@ onBeforeMount(async () => {
   console.log('invokes', isFinshInvoked.value);
 });
 
+const checkPlatform = (platform: EPlatform) => {
+
+  if (platform === EPlatform.H5) {
+    return import('amfe-flexible').then((res) => {
+      console.log('amfe-flexible', res);
+    })
+  }
+}
+
 const setTransitionName = ([enter, leave]: string[] ) => {
-
-
   enterActiveName.value = enter;
   leaveActiveName.value = leave;
 };

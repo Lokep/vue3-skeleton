@@ -1,5 +1,9 @@
 import type { RouteMeta } from "vue-router"
 
+export enum EPlatform {
+  H5 = 'h5',
+  PC = 'pc'
+}
 
 /**
  * @interface ICustomRouteMeta
@@ -23,6 +27,8 @@ import type { RouteMeta } from "vue-router"
  * @property {boolean} [invokeWWSDK] - 是否调用企业微信SDK
  */
 export interface ICustomRouteMeta extends RouteMeta {
+  plaftorm?: EPlatform,
+
   navgationBarTitle?: string,
   navigationStyle?: 'default' | 'custom',
   navigationBarBackgroundColor?: string,
